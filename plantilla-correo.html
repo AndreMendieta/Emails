@@ -1,60 +1,74 @@
-<div style="background:#0D0D0D;padding:24px 12px;font-family:Roboto,Arial,sans-serif;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;margin:0 auto;background:#161616;border-top:4px solid #FF6A00;">
+<!-- Pega TODO este código en EmailJS > Email Templates > Code Editor.
+     Configura en la plantilla:
+       To Email:  {{to_email}}
+       Subject:   ¡Bienvenido a HydroTech!
+       From Name: HydroTech -->
+<table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="background:#e4e4e6;padding:24px 0;font-family:Arial,Helvetica,sans-serif;">
+  <tr>
+    <td align="center">
+      <table width="600" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;width:100%;background:#ffffff;border-radius:6px;overflow:hidden;">
 
-    <!-- 1. LOGO -->
-    <tr>
-      <td align="center" style="padding:32px 24px 8px;">
-        <img src="https://juliansgarciaa-source.github.io/hydrotech-brandbook/assets/logo-full.png" alt="HydroTech" width="200" style="display:block;height:auto;border:0;">
-      </td>
-    </tr>
+        <!-- 1. LOGO / ENCABEZADO -->
+        <tr>
+          <td style="background:#1a1b1e;padding:28px 32px;">
+            <table cellpadding="0" cellspacing="0" role="presentation">
+              <tr>
+                <td style="width:72px;"><img src="https://TU-SITIO.netlify.app/img/logo-icon.png" width="72" alt="HydroTech" style="display:block;border:0;height:auto;"></td>
+                <td style="padding-left:14px;color:#ffffff;font-size:22px;font-weight:bold;letter-spacing:1px;">HYDROTECH
+                  <div style="font-size:12px;font-weight:normal;color:#bdbdbe;letter-spacing:0;">Innovación industrial</div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
 
-    <!-- 2. SALUDO -->
-    <tr>
-      <td align="center" style="padding:16px 32px 0;">
-        <h1 style="margin:0;font-family:Montserrat,Arial,sans-serif;font-size:28px;color:#ffffff;">¡Hola!</h1>
-        <p style="margin:12px 0 0;font-size:16px;line-height:1.6;color:#C0C0C0;">
-          Nos alegra que quieras formar parte de nuestra comunidad.
-        </p>
-      </td>
-    </tr>
+        <!-- 2. SALUDO -->
+        <tr>
+          <td style="padding:36px 32px 8px;">
+            <h1 style="margin:0;font-size:26px;color:#1a1b1e;">¡Hola!</h1>
+            <p style="margin:12px 0 0;font-size:16px;line-height:1.6;color:#3b3d41;">Nos alegra que quieras formar parte de nuestra comunidad.</p>
+          </td>
+        </tr>
 
-    <!-- 3. CONTENIDO -->
-    <tr>
-      <td align="center" style="padding:20px 32px 0;">
-        <p style="margin:0;font-size:16px;line-height:1.6;color:#C0C0C0;">
-          Gracias por suscribirte. Desde ahora recibirás información sobre innovación, tecnología y soluciones industriales
-          en tu correo <strong style="color:#FF6A00;">{{to_email}}</strong>.
-        </p>
-      </td>
-    </tr>
+        <!-- 3. CONTENIDO -->
+        <tr>
+          <td style="padding:16px 32px;">
+            <p style="margin:0;font-size:16px;line-height:1.6;color:#3b3d41;">Gracias por suscribirte. Desde ahora recibirás información sobre innovación, tecnología y soluciones industriales.</p>
+          </td>
+        </tr>
 
-    <!-- 4. BENEFICIOS + BOTÓN -->
-    <tr>
-      <td style="padding:28px 40px 0;">
-        <p style="margin:0 0 12px;font-family:Montserrat,Arial,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;">Lo que recibirás</p>
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-          <tr><td style="padding:8px 0;border-top:1px solid #2a2a2a;font-size:16px;color:#C0C0C0;"><span style="color:#FF6A00;font-weight:bold;">&#9632;</span>&nbsp; Noticias del sector</td></tr>
-          <tr><td style="padding:8px 0;border-top:1px solid #2a2a2a;font-size:16px;color:#C0C0C0;"><span style="color:#FF6A00;font-weight:bold;">&#9632;</span>&nbsp; Consejos técnicos</td></tr>
-          <tr><td style="padding:8px 0;border-top:1px solid #2a2a2a;border-bottom:1px solid #2a2a2a;font-size:16px;color:#C0C0C0;"><span style="color:#FF6A00;font-weight:bold;">&#9632;</span>&nbsp; Novedades y proyectos</td></tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" style="padding:28px 32px 32px;">
-        <a href="https://juliansgarciaa-source.github.io/hydrotech-brandbook/" target="_blank"
-           style="display:inline-block;background:#FF6A00;color:#0D0D0D;font-family:Montserrat,Arial,sans-serif;font-weight:bold;font-size:15px;text-decoration:none;padding:14px 32px;border-radius:4px;">
-          CONOCE MÁS
-        </a>
-      </td>
-    </tr>
+        <!-- 4. BENEFICIOS + BOTÓN -->
+        <tr>
+          <td style="padding:8px 32px 32px;">
+            <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="background:#f3f3f4;border-left:4px solid #f58220;">
+              <tr>
+                <td style="padding:20px 24px;font-size:16px;line-height:1.8;color:#1a1b1e;">
+                  <strong>Con tu suscripción tendrás:</strong><br>
+                  • Noticias del sector.<br>
+                  • Consejos técnicos.<br>
+                  • Novedades y proyectos.
+                </td>
+              </tr>
+            </table>
+            <table cellpadding="0" cellspacing="0" role="presentation" style="margin-top:24px;">
+              <tr>
+                <td style="background:#f58220;border-radius:4px;">
+                  <a href="https://TU-ENLACE-AQUI" style="display:inline-block;padding:14px 28px;font-size:15px;font-weight:bold;color:#1a1208;text-decoration:none;">CONOCE MÁS</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
 
-    <!-- 5. FOOTER -->
-    <tr>
-      <td align="center" style="padding:20px 24px;background:#0D0D0D;border-top:1px solid #2a2a2a;">
-        <p style="margin:0;font-size:14px;color:#C0C0C0;">Gracias por confiar en nosotros.</p>
-        <p style="margin:6px 0 0;font-size:12px;color:#8a8a8a;">© 2026 HydroTech | Todos los derechos reservados.</p>
-      </td>
-    </tr>
+        <!-- 5. FOOTER -->
+        <tr>
+          <td style="background:#1a1b1e;padding:24px 32px;text-align:center;">
+            <p style="margin:0 0 6px;font-size:14px;color:#ffffff;">Gracias por confiar en nosotros.</p>
+            <p style="margin:0;font-size:12px;color:#bdbdbe;">© 2026 HydroTech | Todos los derechos reservados.</p>
+          </td>
+        </tr>
 
-  </table>
-</div>
+      </table>
+    </td>
+  </tr>
+</table>
