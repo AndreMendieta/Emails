@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HydroTech | Suscríbete al boletín</title>
+  <meta name="description" content="Recibe novedades, consejos técnicos y noticias de ingeniería de fluidos para la industria.">
+  <link rel="icon" href="https://juliansgarciaa-source.github.io/hydrotech-brandbook/assets/logo-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card" aria-labelledby="titulo">
+      <img class="logo" src="https://juliansgarciaa-source.github.io/hydrotech-brandbook/assets/logo-full.png" alt="Logotipo HydroTech">
+
+      <p class="tagline">Ingeniería de fluidos industrial</p>
+      <h1 id="titulo">¡Mantente actualizado!</h1>
+      <p class="lead">Suscríbete para recibir novedades, consejos y noticias del sector industrial.</p>
+
+      <form id="form-suscripcion" novalidate>
+        <label for="email">Ingresa tu correo electrónico</label>
+        <div class="pipe">
+          <input type="email" id="email" name="email" placeholder="nombre@empresa.com" autocomplete="email" required>
+          <button type="submit" id="btn">Suscribirme</button>
+        </div>
+        <p id="mensaje" class="mensaje" role="status" aria-live="polite" hidden></p>
+      </form>
+
+      <p class="privacidad">Tu información estará protegida.</p>
+    </section>
+  </main>
+
+  <!-- SDK de EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
