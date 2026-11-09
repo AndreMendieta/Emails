@@ -3,204 +3,173 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HydroTech | Innovación industrial</title>
+<title>HydroTech | Gestión de componentes hidráulicos</title>
+<meta name="description" content="HydroTech centraliza medidas, fotos y datos técnicos de componentes hidráulicos y metalmecánicos. Suscríbete y recibe novedades del sector industrial.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#131416">
+<link rel="canonical" href="https://andremendieta.github.io/Emails/">
+
 <link rel="icon" type="image/svg+xml" href="logo-icon.svg">
+<link rel="icon" type="image/png" href="logo-icon.png">
+<link rel="apple-touch-icon" href="logo-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HydroTech">
+<meta property="og:title" content="HydroTech | Innovación industrial">
+<meta property="og:description" content="Gestiona componentes hidráulicos y metalmecánicos en una sola plataforma.">
+<meta property="og:url" content="https://andremendieta.github.io/Emails/">
+<meta property="og:image" content="https://andremendieta.github.io/Emails/logo-icon.png">
+<meta property="og:locale" content="es_CO">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HydroTech | Innovación industrial">
+<meta name="twitter:description" content="Gestiona componentes hidráulicos y metalmecánicos en una sola plataforma.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "HydroTech",
+  "url": "https://andremendieta.github.io/Emails/",
+  "logo": "https://andremendieta.github.io/Emails/logo-icon.png",
+  "description": "Gestión de componentes hidráulicos y metalmecánicos para el sector industrial."
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --black: #131416;
-    --graphite: #222326;
-    --steel: #47494d;
-    --silver: #bdbdbe;
-    --orange: #f58220;
-    --orange-hi: #ff9a3d;
-    --ok: #7be0a8;
-    --err: #ff9b8a;
-  }
-  * { box-sizing: border-box; margin: 0; }
-  html, body { height: 100%; }
-  body {
-    font-family: "Barlow", system-ui, sans-serif;
-    background: var(--black);
-    color: #ececed;
-    line-height: 1.55;
-  }
-  .page { min-height: 100%; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); }
-  .main {
-    padding: clamp(28px, 6vw, 80px);
-    display: flex; flex-direction: column; justify-content: space-between; gap: 48px;
-    background: linear-gradient(180deg, #2b2c30 0%, var(--graphite) 40%);
-    border-top: 6px solid var(--orange);
-  }
-  .brand { display: flex; align-items: center; gap: 14px; }
-  .brand img { width: 64px; height: auto; display: block; }
-  .brand span { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1.5rem; letter-spacing: .04em; font-style: italic; }
-  .brand small { display: block; font-family: "Barlow", sans-serif; font-weight: 400; font-style: normal; font-size: .85rem; letter-spacing: .02em; color: var(--silver); }
-  h1 { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: clamp(2.8rem, 7vw, 5.2rem); line-height: .98; margin-bottom: 18px; }
-  .lead { max-width: 46ch; color: var(--silver); margin-bottom: 32px; }
-  form { max-width: 480px; }
-  label { display: block; font-weight: 500; margin-bottom: 8px; }
-  .row { display: flex; gap: 10px; }
-  input[type=email] {
-    flex: 1; min-width: 0; padding: 14px 16px; font: inherit; color: #fff;
-    background: var(--black); border: 2px solid var(--steel); border-radius: 4px;
-  }
-  input[type=email]::placeholder { color: #75777c; }
-  input[type=email]:focus { outline: none; border-color: var(--orange); }
-  button {
-    padding: 14px 22px; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1.1rem; letter-spacing: .03em;
-    background: linear-gradient(180deg, var(--orange-hi), var(--orange)); color: #1a1208;
-    border: 0; border-radius: 4px; cursor: pointer; transition: filter .15s, transform .1s;
-  }
-  button:hover { filter: brightness(1.1); }
-  button:active { transform: translateY(1px); }
-  button:focus-visible, input:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
-  button:disabled { opacity: .6; cursor: wait; }
-  #msg { min-height: 1.6em; margin-top: 12px; font-weight: 500; }
-  #msg.ok { color: var(--ok); }
-  #msg.err { color: var(--err); }
-  .privacy { margin-top: 6px; font-size: .9rem; color: #8d8f94; }
-  footer { font-size: .85rem; color: #8d8f94; }
-  .logo-panel { display: grid; place-items: center; background: radial-gradient(circle at 50% 45%, #2a2b2f 0%, var(--black) 70%); padding: 32px; }
-  .phone {
-    --logo: url("logo-full.svg");
-    --w: 250px;
-    position: relative; width: var(--w); aspect-ratio: 9 / 18.5; font-size: calc(var(--w) / 22);
-    border-radius: 2.6em; padding: .55em; background: #0b0b0c;
-    box-shadow: 0 0 0 2px var(--steel), 0 0 0 4px #0b0b0c, 0 0 5em rgba(245,130,32,.28), 0 2em 3em rgba(0,0,0,.6);
-    animation: enter 1s cubic-bezier(.2,.7,.2,1) both, float 7s ease-in-out 1s infinite;
-  }
-  .phone::before { content: ""; position: absolute; z-index: 5; top: 1.1em; left: 50%; width: 4.5em; height: 1.1em; margin-left: -2.25em; border-radius: 1em; background: #000; }
-  .screen { position: relative; width: 100%; height: 100%; border-radius: 2.1em; overflow: hidden; background: linear-gradient(180deg, #2b2c30, #17181a); }
-  .layer { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2.6em 1.4em 1.4em; text-align: center; opacity: 0; animation-duration: 13s; animation-iteration-count: infinite; animation-fill-mode: both; }
-  .l-splash { animation-name: k-splash; }
-  .l-form { animation-name: k-form; align-items: stretch; justify-content: flex-start; text-align: left; gap: .65em; padding-top: 3.4em; background: linear-gradient(180deg, #2b2c30, #222326); box-shadow: inset 0 .35em 0 var(--orange); }
-  .m-brand { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-style: italic; font-size: 1.25em; letter-spacing: .04em; margin-bottom: .6em; }
-  .m-brand small { display: block; font-family: "Barlow", sans-serif; font-weight: 400; font-style: normal; font-size: .62em; letter-spacing: 0; color: var(--silver); }
-  .m-label { font-size: .8em; font-weight: 500; margin-top: .4em; }
-  .m-priv { font-size: .7em; color: #8d8f94; }
-  .l-ok { animation-name: k-ok; gap: .7em; }
-  .splash-logo { width: 82%; aspect-ratio: 495 / 436; background: var(--logo) center / contain no-repeat; }
-  .m-title { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 2.3em; line-height: .98; }
-  .m-text { font-size: .85em; color: var(--silver); }
-  .m-field { background: #0e0f10; border: .15em solid var(--steel); border-radius: .4em; padding: .7em .8em; font-size: .85em; min-height: 2.6em; }
-  .typed { display: inline-block; overflow: hidden; white-space: nowrap; vertical-align: bottom; width: 0; font-family: ui-monospace, Menlo, Consolas, monospace; border-right: .12em solid var(--orange); animation: k-type 13s steps(17, end) infinite; }
-  .m-btn { background: linear-gradient(180deg, var(--orange-hi), var(--orange)); color: #1a1208; border-radius: .4em; text-align: center; padding: .7em; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1.05em; animation: k-press 13s infinite; }
-  .check { width: 3.6em; height: 3.6em; border-radius: 50%; background: rgba(123,224,168,.15); border: .16em solid var(--ok); color: var(--ok); display: grid; place-items: center; font-size: 1.4em; font-weight: 700; }
-  .ok-text { color: var(--ok); font-weight: 500; font-size: 1.05em; }
-  .notif { position: absolute; z-index: 4; top: 2.8em; left: .7em; right: .7em; display: flex; gap: .7em; align-items: center; padding: .7em; border-radius: 1em; background: rgba(250,250,250,.96); color: #1a1b1e; box-shadow: 0 .6em 1.6em rgba(0,0,0,.5); transform: translateY(-150%); opacity: 0; animation: k-notif 13s infinite; }
-  .notif i { flex: none; width: 2.6em; height: 2.3em; background: var(--logo) center / contain no-repeat; }
-  .notif b { display: block; font-size: .9em; }
-  .notif span { display: block; font-size: .78em; color: #55575c; line-height: 1.3; }
-  @keyframes k-splash { 0%, 6% { opacity: 0; } 10%, 24% { opacity: 1; } 28%, 100% { opacity: 0; } }
-  @keyframes k-form { 0%, 25% { opacity: 0; } 29%, 60% { opacity: 1; } 64%, 100% { opacity: 0; } }
-  @keyframes k-type { 0%, 33% { width: 0; } 47%, 100% { width: 17ch; } }
-  @keyframes k-press { 0%, 51% { transform: none; filter: none; } 53% { transform: scale(.93); filter: brightness(1.35); } 56%, 100% { transform: none; filter: none; } }
-  @keyframes k-ok { 0%, 61% { opacity: 0; transform: scale(.9); } 65%, 76% { opacity: 1; transform: none; } 80%, 100% { opacity: 0; } }
-  @keyframes k-notif { 0%, 72% { transform: translateY(-150%); opacity: 0; } 77%, 94% { transform: none; opacity: 1; } 98%, 100% { transform: translateY(-150%); opacity: 0; } }
-  @keyframes enter { from { opacity: 0; transform: translateY(40px) scale(.94); } to { opacity: 1; transform: none; } }
-  @keyframes float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -8px; } }
-  @media (prefers-reduced-motion: reduce) {
-    .phone, .layer, .typed, .m-btn, .notif { animation: none; }
-    .l-form { opacity: 1; } .typed { width: 17ch; border: 0; }
-  }
-  @media (max-width: 820px) {
-    .page { grid-template-columns: 1fr; }
-    .logo-panel { order: -1; padding: 20px; }
-    .phone { --w: 190px; }
-    .row { flex-direction: column; }
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="page">
-  <section class="main">
-    <div class="brand"><img src="logo-icon.svg" alt=""><span>HydroTech<small>Innovación industrial</small></span></div>
-
-    <div>
-      <h1>¡Mantente actualizado!</h1>
-      <p class="lead">Suscríbete para recibir novedades, consejos y noticias del sector industrial.</p>
-
-      <form id="form" novalidate>
-        <label for="email">Ingresa tu correo electrónico</label>
-        <div class="row">
-          <input type="email" id="email" name="email" placeholder="nombre@correo.com" autocomplete="email" required>
-          <button type="submit" id="btn">Suscribirme</button>
-        </div>
-        <p id="msg" role="status" aria-live="polite"></p>
-        <p class="privacy">Tu información estará protegida.</p>
-      </form>
-    </div>
-
-    <footer>© 2026 HydroTech | Todos los derechos reservados.</footer>
-  </section>
-
-  <aside class="logo-panel" aria-label="Animación de un celular abriendo la página de HydroTech">
-    <div class="phone" role="img" aria-label="Celular mostrando la página de suscripción de HydroTech">
-      <div class="screen">
-        <div class="layer l-splash"><div class="splash-logo"></div></div>
-        <div class="layer l-form">
-          <div class="m-brand">HydroTech<small>Innovación industrial</small></div>
-          <div class="m-title">¡Mantente actualizado!</div>
-          <div class="m-text">Suscríbete para recibir novedades, consejos y noticias del sector industrial.</div>
-          <div class="m-label">Ingresa tu correo electrónico</div>
-          <div class="m-field"><span class="typed">nombre@correo.com</span></div>
-          <div class="m-btn">Suscribirme</div>
-          <div class="m-priv">Tu información estará protegida.</div>
-        </div>
-        <div class="layer l-ok"><div class="check">✓</div><div class="ok-text">¡Suscripción exitosa!</div></div>
-        <div class="notif"><i></i><div><b>HydroTech</b><span>¡Bienvenido a HydroTech! Gracias por suscribirte.</span></div></div>
+<main>
+  <div class="page">
+    <section class="main">
+      <div class="brand">
+        <img src="logo-icon.svg" alt="Logo de HydroTech" width="64" height="64">
+        <span>HydroTech<small>Innovación industrial</small></span>
       </div>
+
+      <div>
+        <h1>Gestiona tus componentes hidráulicos en una sola ficha</h1>
+        <p class="lead">HydroTech es la app móvil que reemplaza cuadernos y hojas de cálculo con fichas técnicas de mangueras, cilindros y piezas de maquinaria pesada.</p>
+
+        <h2 class="sub-title">¡Mantente actualizado!</h2>
+        <p class="lead">Suscríbete para recibir novedades, consejos y noticias del sector industrial.</p>
+
+        <form id="form" novalidate>
+          <label for="email">Ingresa tu correo electrónico</label>
+          <div class="row">
+            <input type="email" id="email" name="email" placeholder="nombre@correo.com" autocomplete="email" required>
+            <button type="submit" id="btn">Suscribirme</button>
+          </div>
+          <p id="msg" role="status" aria-live="polite"></p>
+          <p class="privacy">Tu información estará protegida.</p>
+        </form>
+      </div>
+    </section>
+
+    <aside class="logo-panel" aria-label="Animación de un celular abriendo la página de HydroTech">
+      <div class="phone" role="img" aria-label="Celular mostrando la página de suscripción de HydroTech">
+        <div class="screen">
+          <div class="layer l-splash"><div class="splash-logo"></div></div>
+          <div class="layer l-form">
+            <div class="m-brand">HydroTech<small>Innovación industrial</small></div>
+            <div class="m-title">¡Mantente actualizado!</div>
+            <div class="m-text">Suscríbete para recibir novedades, consejos y noticias del sector industrial.</div>
+            <div class="m-label">Ingresa tu correo electrónico</div>
+            <div class="m-field"><span class="typed">nombre@correo.com</span></div>
+            <div class="m-btn">Suscribirme</div>
+            <div class="m-priv">Tu información estará protegida.</div>
+          </div>
+          <div class="layer l-ok"><div class="check">✓</div><div class="ok-text">¡Suscripción exitosa!</div></div>
+          <div class="notif"><i></i><div><b>HydroTech</b><span>¡Bienvenido a HydroTech! Gracias por suscribirte.</span></div></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="content">
+    <div class="content-inner">
+
+      <section aria-labelledby="que-es">
+        <h2 id="que-es">¿Qué es HydroTech?</h2>
+        <p>HydroTech es una aplicación móvil para identificar, registrar y consultar la información técnica de componentes hidráulicos y metalmecánicos de maquinaria pesada y del sector industrial. Cada componente tiene su ficha con medidas, características, fotos y planos, para que ninguna medida se pierda en un cuaderno o en una hoja de cálculo.</p>
+        <p>La plataforma funciona para varias empresas a la vez y organiza el acceso por roles: administrador, supervisor y técnico.</p>
+      </section>
+
+      <section aria-labelledby="beneficios">
+        <h2 id="beneficios">Beneficios para tu taller</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Información centralizada</h3>
+            <p>Mangueras hidráulicas, cilindros hidráulicos y piezas fabricadas en torno, todo en un solo lugar y con su historial.</p>
+          </article>
+          <article class="card">
+            <h3>Órdenes de servicio</h3>
+            <p>Asigna trabajos, adjunta evidencias y sigue el estado de cada orden desde el celular.</p>
+          </article>
+          <article class="card">
+            <h3>Acceso por roles</h3>
+            <p>Cada persona ve solo lo que le corresponde, con registro de auditoría de los cambios.</p>
+          </article>
+          <article class="card">
+            <h3>Reportes y notificaciones</h3>
+            <p>Recibe avisos y genera reportes para tomar decisiones con datos reales de tu maquinaria.</p>
+          </article>
+          <article class="card">
+            <h3>Asistente con IA</h3>
+            <p>Consulta en lenguaje natural la información que ya registraste de tus componentes.</p>
+          </article>
+          <article class="card">
+            <h3>Hecho para el taller</h3>
+            <p>Una interfaz clara para trabajar en campo, en el taller o en la planta.</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="como-funciona">
+        <h2 id="como-funciona">Cómo funciona</h2>
+        <ol class="steps">
+          <li><strong>Registra la maquinaria.</strong> Crea la ficha de cada vehículo o equipo de tu empresa.</li>
+          <li><strong>Agrega sus componentes.</strong> Guarda medidas, fotos y planos de cada manguera, cilindro o pieza.</li>
+          <li><strong>Gestiona el servicio.</strong> Genera órdenes, asigna técnicos y consulta reportes cuando los necesites.</li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="faq">
+        <h2 id="faq">Preguntas frecuentes</h2>
+        <details>
+          <summary>¿HydroTech está disponible para descargar?</summary>
+          <p>HydroTech está en su primera versión beta. Suscríbete con tu correo y te avisaremos de cada novedad y lanzamiento.</p>
+        </details>
+        <details>
+          <summary>¿Qué tipo de componentes puedo registrar?</summary>
+          <p>Mangueras hidráulicas, cilindros hidráulicos y piezas metalmecánicas fabricadas en torno, además de la maquinaria y los vehículos a los que pertenecen.</p>
+        </details>
+        <details>
+          <summary>¿Pueden usarla varias empresas y equipos?</summary>
+          <p>Sí. HydroTech maneja empresas cliente y usuarios con tres roles: administrador, supervisor y técnico.</p>
+        </details>
+        <details>
+          <summary>¿Qué haré con mi correo?</summary>
+          <p>Solo lo usaremos para enviarte información de HydroTech. Tu información estará protegida.</p>
+        </details>
+      </section>
+
+      <section aria-labelledby="marca">
+        <h2 id="marca">Identidad de marca</h2>
+        <p>Conoce el logotipo, los colores y la tipografía de HydroTech en la <a href="brandbook/">guía de marca e identidad visual</a>.</p>
+      </section>
+
     </div>
-  </aside>
-</div>
+  </div>
+</main>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
-<script>
-  const PUBLIC_KEY  = "JIAaVCRmoiWNbwFtO";   
-  const SERVICE_ID  = "service_bq6mjat";   
-  const TEMPLATE_ID = "template_3fvmpii";
+<footer>
+  <p>© 2026 HydroTech | Todos los derechos reservados.</p>
+</footer>
 
-  emailjs.init({ publicKey: PUBLIC_KEY });
-
-  const form = document.getElementById("form");
-  const input = document.getElementById("email");
-  const btn = document.getElementById("btn");
-  const msg = document.getElementById("msg");
-
-  function show(text, type) {
-    msg.textContent = text;
-    msg.className = type;
-  }
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const email = input.value.trim();
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      show("Escribe un correo válido, por ejemplo nombre@correo.com.", "err");
-      input.focus();
-      return;
-    }
-
-    btn.disabled = true;
-    btn.textContent = "Enviando…";
-    show("", "");
-
-    try {
-      await emailjs.send(SERVICE_ID, TEMPLATE_ID, { to_email: email });
-      show("¡Suscripción exitosa! Revisa tu bandeja de entrada (y el spam).", "ok");
-      form.reset();
-    } catch (err) {
-      console.error(err);
-      show("Error " + (err.status || "") + ": " + (err.text || err.message || err), "err");
-    } finally {
-      btn.disabled = false;
-      btn.textContent = "Suscribirme";
-    }
-  });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js" defer></script>
+<script src="script.js" defer></script>
 </body>
 </html>

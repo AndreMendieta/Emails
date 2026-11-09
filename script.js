@@ -1,59 +1,43 @@
-// ============================================================
-// 1) PEGA AQUÍ TUS CREDENCIALES DE EMAILJS
-//    - Public Key: Account > General
-//    - Service ID: Email Services
-//    - Template ID: Email Templates
-// ============================================================
-const EMAILJS_PUBLIC_KEY = "TU_PUBLIC_KEY";
-const EMAILJS_SERVICE_ID = "TU_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "TU_TEMPLATE_ID";
+// EmailJS: en el panel de EmailJS restringe el uso a tu dominio (Security > Allowed domains)
+const PUBLIC_KEY  = "JIAaVCRmoiWNbwFtO";
+const SERVICE_ID  = "service_bq6mjat";
+const TEMPLATE_ID = "template_3fvmpii";
 
-emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+emailjs.init({ publicKey: PUBLIC_KEY });
 
-const form = document.getElementById("form-suscripcion");
-const inputEmail = document.getElementById("email");
-const boton = document.getElementById("btn");
-const mensaje = document.getElementById("mensaje");
+const form = document.getElementById("form");
+const input = document.getElementById("email");
+const btn = document.getElementById("btn");
+const msg = document.getElementById("msg");
 
-function mostrarMensaje(texto, tipo) {
-  mensaje.textContent = texto;
-  mensaje.className = "mensaje " + tipo;
-  mensaje.hidden = false;
-}
-
-function correoValido(valor) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(valor);
+function show(text, type) {
+  msg.textContent = text;
+  msg.className = type;
 }
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const correo = inputEmail.value.trim();
+  const email = input.value.trim();
 
-  if (!correoValido(correo)) {
-    mostrarMensaje("Escribe un correo válido, por ejemplo nombre@empresa.com.", "error");
-    inputEmail.focus();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    show("Escribe un correo válido, por ejemplo nombre@correo.com.", "err");
+    input.focus();
     return;
   }
 
-  boton.disabled = true;
-  boton.textContent = "Enviando...";
-  mensaje.hidden = true;
+  btn.disabled = true;
+  btn.textContent = "Enviando…";
+  show("", "");
 
   try {
-    // Estas variables deben coincidir con las de la plantilla en EmailJS
-    // (el campo "To Email" de la plantilla debe ser {{to_email}}).
-    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-      to_email: correo,
-      email: correo
-    });
-
-    mostrarMensaje("¡Suscripción exitosa! Revisa tu correo: te enviamos un mensaje de bienvenida.", "ok");
+    await emailjs.send(SERVICE_ID, TEMPLATE_ID, { to_email: email });
+    show("¡Suscripción exitosa! Revisa tu bandeja de entrada (y el spam).", "ok");
     form.reset();
-  } catch (error) {
-    console.error("Error EmailJS:", error);
-    mostrarMensaje("No pudimos completar tu suscripción. Intenta de nuevo en unos minutos.", "error");
+  } catch (err) {
+    console.error(err);
+    show("Error " + (err.status || "") + ": " + (err.text || err.message || err), "err");
   } finally {
-    boton.disabled = false;
-    boton.textContent = "Suscribirme";
+    btn.disabled = false;
+    btn.textContent = "Suscribirme";
   }
 });

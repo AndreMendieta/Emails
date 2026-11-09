@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://andremendieta.github.io/Emails/sitemap.xml
